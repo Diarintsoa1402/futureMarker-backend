@@ -56,7 +56,8 @@ exports.createProject = async (req, res) => {
     const activeProjects = await Project.count({ 
       where: { 
         userId,
-        status: { [Op.in]: ['en cours', 'validé'] }
+       status: { [Op.in]: ['en cours', 'financé'] }
+
       } 
     });
 

@@ -88,7 +88,7 @@ app.use("/api/chat", chatRoutes);
 app.use("/api/woman", womanRoutes);
 
 // Servir les certificats statiques
-app.use("/certificates", express.static(path.join(__dirname, "public/certificates")));
+app.use("/certificates", express.static(path.join(__dirname, "../public/certificates")));
 
 // Test
 app.get("/", (req, res) => res.send("FutureMakers Hub API + Chat OK"));

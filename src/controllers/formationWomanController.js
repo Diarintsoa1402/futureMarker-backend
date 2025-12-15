@@ -5,6 +5,8 @@ const FormationEnrollment = require("../models/FormationEnrollment");
 const ModuleProgress = require("../models/ModuleProgress");
 const index = require("../models/index");
 const { generateCertificate } = require("../utils/certificateGenerator");
+const path = require('path');
+const fs = require('fs');
 // Lister formations disponibles
 exports.getAvailableFormations = async (req, res) => {
   try {
