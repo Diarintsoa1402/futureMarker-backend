@@ -126,7 +126,9 @@ io.on("connection", (socket) => {
       socket.emit("messageError", { error: error.message });
     }
   });
-
+sequelize.authenticate()
+  .then(() => console.log("✅ PostgreSQL Render connecté"))
+  .catch(err => console.error("❌ Erreur PostgreSQL :", err));
   // Message de groupe
   socket.on("joinGroup", (groupId) => socket.join(`group_${groupId}`));
   socket.on("leaveGroup", (groupId) => socket.leave(`group_${groupId}`));
