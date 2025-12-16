@@ -77,7 +77,7 @@ app.use("/api/projects", require("./routes/project"));
 app.use("/api/mentorships", require("./routes/mentorship"));
 app.use("/api/fundings", require("./routes/funding"));
 app.use("/api/users", userRoutes);
-app.use("/api/profile", require("./routes/Profile"));
+app.use("/api/profile", require("./routes/profile"));
 
 app.use("/api/progress", progressRoutes);
 app.use("/api/mentorship-sessions", mentorshipSessionRoutes);
